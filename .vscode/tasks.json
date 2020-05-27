@@ -21,12 +21,11 @@
 			"promptOnClose": true,
 			"detail": "runs the web application",
 			"windows": {
-				"command": ".venv\\bin\\activate",
+				"command": "&",
 				"args": [
-					"&&",
-					"make","beauty_start","&&",
-					"python","manage.py","runserver","5555","&&",
-					"make","beauty_end",
+					"e:/Projects/Vplay/Vplay/.venv/Scripts/Activate.ps1",
+					";",
+					"python","manage.py","runserver","5555"
 				]
 			},
 			"command": "source",

@@ -4,14 +4,15 @@ here is a good reason to start closing youtube and open this masterpiece
 #### Setup the Workspace:
 1. You have to have python installed (offcourse)  
 2. Download VS code  
-3. Download the project from Github - put it where ever you like  
-4. Open the project in VS code  
-5. If bunch of extensions will be recommended to you **DOWNLOAD ALL OF THEM**  
-6. Open the terminal (Terminal tab -> new Terminal) and write  
-	`git remote add origin https://github.com/MartinEmilEshack/Vplay.git`  
-7. In the terminal write  
+3. Make a folder named "Vplay" where ever you like  
+4. Open the folder in VS code  
+5. Open the terminal (Terminal tab -> new Terminal) and write  
+	`git init`  
 	`git config --global user.name "Your name"`  
 	`git config --global user.email "email@.blabla.com"`  
+	`git remote add origin https://github.com/MartinEmilEshack/Vplay.git`  
+6. From the "Source Control" icon on the left select the (Three Dots) -> Pull  
+7. If a bunch of extensions will be recommended to you **DOWNLOAD ALL OF THEM**  
 8. Make sure you have two tags on the bottom left of VS code one with the  
 	name "master*" and the other is a circle thingy  
 9. Press *Ctrl+Shift+B* then choose Setup from the appearing menu a terminal will open up.  

@@ -57,9 +57,9 @@
 			"windows": {
 				"command": "virtualenv",
 				"args": [
-					".venv","&&",
-					".venv\\bin\\activate","&&",
-					"make","import","&&",
+					".venv","|",
+					".venv\\bin\\activate","|",
+					"make","import","|",
 					"deactivate"
 				]
 			},

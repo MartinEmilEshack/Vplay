@@ -21,7 +21,7 @@
 			"promptOnClose": true,
 			"detail": "runs the web application",
 			"windows": {
-				"command": "&",
+				"command": "&", 
 				"args": [
 					"e:/Projects/Vplay/Vplay/.venv/Scripts/Activate.ps1",
 					";",

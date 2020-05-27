@@ -1,5 +1,5 @@
 # Vplay
-A shitty YouTube alternative for no reason
+here is a good reason to start closing youtube and open this masterpiece
 
 #### Setup the Workspace:
 1. You have to have python installed (offcourse)  

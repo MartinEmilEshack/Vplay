@@ -1,7 +1,7 @@
 # Vplay
 A shitty YouTube alternative for no reason
 
-Setup the Workspace:  
+##### Setup the Workspace:  
 	 1- You have to have python installed (offcourse)  
 	 2- Download VS code  
 	 3- Download the project from Github - put it where ever you like  

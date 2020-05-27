@@ -55,9 +55,9 @@
 			"promptOnClose": true,
 			"detail": "makes the python virtual enviroment and intsalls the modules",
 			"windows": {
-				"command": "python",
+				"command": "virtualenv",
 				"args": [
-					"-m","venv",".venv","&&",
+					".venv","&&",
 					".venv\\bin\\activate","&&",
 					"make","import","&&",
 					"deactivate"

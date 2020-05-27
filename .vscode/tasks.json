@@ -1,0 +1,75 @@
+{
+	// See https://go.microsoft.com/fwlink/?LinkId=733558
+	// for the documentation about the tasks.json format
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run",
+			"type": "shell",
+			"group": "build",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "dedicated",
+				"focus": false,
+				"showReuseMessage": false,
+				"revealProblems": "onProblem",
+				"echo": false,
+				"clear": true,
+				"group": "runners"
+			},
+			"runOptions": {"instanceLimit": 1},
+			"promptOnClose": true,
+			"detail": "runs the web application",
+			"windows": {
+				"command": ".venv\\bin\\activate",
+				"args": [
+					"&&",
+					"make","beauty_start","&&",
+					"python","manage.py","runserver","5555","&&",
+					"make","beauty_end",
+				]
+			},
+			"command": "source",
+			"args": [
+				".venv/bin/activate","&&",
+				"make","beauty_start","&&",
+				"python","manage.py","runserver","5555","&&",
+				"make","beauty_end",
+			]
+		},
+		{
+			"label": "Setup",
+			"type": "shell",
+			"group": "build",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "shared",
+				"focus": false,
+				"showReuseMessage": false,
+				"revealProblems": "onProblem",
+				"echo": false,
+				"clear": true,
+				"group": "setuppers"
+			},
+			"runOptions": {"instanceLimit": 1},
+			"promptOnClose": true,
+			"detail": "makes the python virtual enviroment and intsalls the modules",
+			"windows": {
+				"command": "python",
+				"args": [
+					"-m","venv",".venv","&&",
+					".venv\\bin\\activate","&&",
+					"make","import","&&",
+					"deactivate"
+				]
+			},
+			"command": "python3",
+			"args": [
+				"-m","venv",".venv","&&",
+				"source",".venv/bin/activate","&&",
+				"make","import","&&",
+				"deactivate"
+			]
+		}
+	]
+}

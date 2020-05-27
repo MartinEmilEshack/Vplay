@@ -24,4 +24,11 @@ here is a good reason to start closing youtube and open this masterpiece
 	it while holding *Ctrl* button, it will open a webpage in your browser.  
 	> Note: If this webpage doesn't appear redo step 9 and look for any errors and try  
 	> solving them. When done, redo step 10.  
-	
+  
+  
+
+#### Working Schema:  
+There will be 2 branches (other than the master)  
+1. frontend  
+2. backend  
+When a branch get updated and we all agree on the changes we will merge that branch into master  

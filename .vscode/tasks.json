@@ -23,17 +23,48 @@
 			"windows": {
 				"command": "&", 
 				"args": [
-					"e:/Projects/Vplay/Vplay/.venv/Scripts/Activate.ps1",
-					";",
-					"python","manage.py","runserver","5555"
+					"${workspaceFolder}/.venv/Scripts/Activate.ps1",";",
+					"python","manage.py","runserver"
 				]
 			},
 			"command": "source",
 			"args": [
 				".venv/bin/activate","&&",
 				"make","beauty_start","&&",
-				"python","manage.py","runserver","5555","&&",
+				"python","manage.py","runserver","&&",
 				"make","beauty_end",
+			]
+		},
+		{
+			"label": "Migrate",
+			"type": "shell",
+			"group": "build",
+			"presentation": {
+				"reveal": "silent",
+				"panel": "dedicated",
+				"focus": false,
+				"showReuseMessage": false,
+				"revealProblems": "onProblem",
+				"echo": false,
+				"clear": true,
+				"group": "migrationers"
+			},
+			"runOptions": {"instanceLimit": 1},
+			"promptOnClose": true,
+			"detail": "Makes Migrations then Migrates",
+			"windows": {
+				"command": "&", 
+				"args": [
+					"${workspaceFolder}/.venv/Scripts/Activate.ps1",";",
+					"python","manage.py","makemigrations",";",
+					"python","manage.py","migrate"
+				]
+			},
+			"command": "source",
+			"args": [
+				".venv/bin/activate","&&",
+				"python","manage.py","makemigrations","&&",
+				"python","manage.py","migrate"
 			]
 		},
 		{

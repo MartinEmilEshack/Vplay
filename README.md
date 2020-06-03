@@ -1,7 +1,8 @@
 # Vplay
 here is a good reason to start closing youtube and open this masterpiece
 
-#### Setup the Workspace:
+#### Setup the Workspace: 
+(if you're on Linux/Mac follow the following instructions if you're on Windows commit suicide)
 1. You have to have python installed (offcourse)  
 2. Download VS code  
 3. Make a folder named "Vplay" where ever you like  

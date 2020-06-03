@@ -15,5 +15,9 @@ beauty_end:
 	echo " Server died"
 	tput sgr0
 
+clean_media:
+	$(RM) vsrc/**
+
 import:
 	python -m pip install django
+	python -m pip install ffmpeg-python

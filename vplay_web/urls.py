@@ -15,7 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from django.conf import settings
+from django.conf.urls.static import static
 from pages.views import home_view, display_view, login_view, signup_view #aniki you suck
 from users.views import LogInCreateView, SignUpCreateView #martin was here 8^)
 from videos.views import VideoDetailView, display_video
@@ -29,6 +30,6 @@ urlpatterns = [
     path('login/', LogInCreateView.as_view() , name = 'login'),
     path('signup/', SignUpCreateView.as_view(), name = 'signup'),
     path('video/<int:vid_hash>/', display_video)
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-urlpatterns += staticfiles_urlpatterns()
+# urlpatterns += staticfiles_urlpatterns()

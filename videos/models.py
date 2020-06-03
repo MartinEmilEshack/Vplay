@@ -41,6 +41,9 @@ class Video(models.Model):
 			video_probe = ffmpeg.probe(video_path)
 		except ffmpeg.Error as e:
 			return super().clean()
+		except FileNotFoundError as e:
+			print(e)
+			return super().clean()
 
 		hashed_probe = hashlib.md5(json.dumps(video_probe).encode('utf-8')).hexdigest()
 

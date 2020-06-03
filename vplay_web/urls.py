@@ -16,15 +16,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from pages.views import home_view, display_view, login_view, signup_view
+from pages.views import home_view, display_view, login_view, signup_view #aniki you suck
+from users.views import LogInCreateView, SignUpCreateView #martin was here 8^)
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('', home_view, name='home'),
-    path('login/', login_view, name = 'login'),
+    path('login/', LogInCreateView.as_view() , name = 'login'),
     path('display/', display_view, name = 'display'),
-    path('signup/', signup_view, name = 'signup'),
+    path('signup/', SignUpCreateView.as_view(), name = 'signup'),
     path('admin/', admin.site.urls),
 ]
 

@@ -43,8 +43,7 @@ INSTALLED_APPS = [
     'pages',
     'home',
     'display',
-    'login',
-    'signup',
+    'users',
     'videos',
 ]
 

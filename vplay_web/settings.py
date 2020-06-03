@@ -42,6 +42,9 @@ INSTALLED_APPS = [
     # Vplay Apps
     'pages',
     'home',
+    'display',
+    'login',
+    'signup',
     'videos',
 ]
 

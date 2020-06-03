@@ -21,9 +21,9 @@
 			"promptOnClose": true,
 			"detail": "runs the web application",
 			"windows": {
-				"command": "&", 
+				"command": "${workspaceFolder}/.venv/Scripts/activate", 
 				"args": [
-					"${workspaceFolder}/.venv/Scripts/Activate.ps1",";",
+					"&&",
 					"python","manage.py","runserver"
 				]
 			},
@@ -53,10 +53,10 @@
 			"promptOnClose": true,
 			"detail": "Makes Migrations then Migrates",
 			"windows": {
-				"command": "&", 
+				"command": "${workspaceFolder}/.venv/Scripts/activate", 
 				"args": [
-					"${workspaceFolder}/.venv/Scripts/Activate.ps1",";",
-					"python","manage.py","makemigrations",";",
+					"&&",
+					"python","manage.py","makemigrations","&&",
 					"python","manage.py","migrate"
 				]
 			},

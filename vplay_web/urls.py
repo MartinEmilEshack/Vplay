@@ -18,15 +18,17 @@ from django.urls import path
 
 from pages.views import home_view, display_view, login_view, signup_view #aniki you suck
 from users.views import LogInCreateView, SignUpCreateView #martin was here 8^)
+from videos.views import VideoDetailView, display_video
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('display/', display_view, name = 'display'),
     path('', home_view, name='home'),
     path('login/', LogInCreateView.as_view() , name = 'login'),
-    path('display/', display_view, name = 'display'),
     path('signup/', SignUpCreateView.as_view(), name = 'signup'),
-    path('admin/', admin.site.urls),
+    path('video/<int:vid_hash>/', display_video)
 ]
 
 urlpatterns += staticfiles_urlpatterns()

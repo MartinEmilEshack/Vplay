@@ -23,18 +23,18 @@ class VideoSystemStorage(FileSystemStorage):
 		return super(VideoSystemStorage, self)._save(name, content)
 
 class Video(models.Model):
-	video_file = models.FileField(storage=VideoSystemStorage())
-	name = models.CharField(max_length=50)
-	description = models.TextField(blank=True, null=True)
-	tags = models.TextField(blank=True, null=True)
+	video_file 		= models.FileField(storage=VideoSystemStorage())
+	name 				= models.CharField(max_length=50)
+	description 	= models.TextField(blank=True, null=True)
+	tags 				= models.TextField(blank=True, null=True)
+	
 	# non shown fields
-	duration = models.TimeField(editable=False, null=False)
-	probe_hash = models.CharField(editable=False, max_length=100, unique=True, null=False)
+	duration 		= models.TimeField(editable=False, null=False)
+	probe_hash 		= models.CharField(editable=False, max_length=100, unique=True, null=False)
 	thumbnail_path = models.FilePathField(editable=False, null=False)
 
 	def clean(self):
-		video_path = self.video_file.name
-		video_path = video_path.replace(' ','_')
+		video_path = self.video_file.name.replace(' ','_')
 		video_path = os.path.join(BASE_DIR,MEDIA_ROOT,video_path)
 
 		try:

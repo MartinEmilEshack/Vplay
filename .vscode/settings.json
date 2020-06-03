@@ -2,7 +2,7 @@
 	"editor.tabSize": 3,
 	"editor.insertSpaces": false,
 	"editor.padding.bottom": 90,
-	"python.pythonPath": ".venv/bin/python",
+	"python.pythonPath": ".venv\\Scripts\\python.exe",
 	"python.linting.enabled": true,
 	"files.exclude": {
 		"**/.git": true,

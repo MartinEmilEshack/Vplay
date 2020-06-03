@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path
 
 from home import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
-    # path('', views.home_view),
+    path('', views.home_view, name='home'),
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += staticfiles_urlpatterns()

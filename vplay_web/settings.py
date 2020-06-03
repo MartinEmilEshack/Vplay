@@ -39,7 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     
     # Vplay Apps
+    'pages',
     'home',
+    'display',
 ]
 
 MIDDLEWARE = [

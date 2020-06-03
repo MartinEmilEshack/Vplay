@@ -6,3 +6,9 @@ def home_view(request):
 
 def display_view(request):
 	return render(request, 'display.html', {})
+
+def login_view(request):
+	return render(request, 'login.html', {})
+
+def signup_view(request):
+	return render(request, 'signup.html', {})

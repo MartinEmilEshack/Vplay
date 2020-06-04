@@ -1,7 +1,7 @@
-<video poster="/vsrc/2.jpeg" width="800" height="600" controls="">
-	<source src="/vsrc/2.webm" type="video/webm" />
-	<source src="/vsrc/2.mp4" type="video/mp4" />
-	{% comment %} <source src="{{ url }}" type="video/webm"> {% endcomment %}
-</video>
+{% block video_player %}
 
-<h1>{{ url }}</h1>
+	<video width="200" height="200" controls="">
+		<source src="{{ object.video_file.url }}" type="video/mp4" />
+	</video>
+
+{% endblock video_player %}

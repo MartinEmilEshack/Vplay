@@ -20,9 +20,10 @@
 </head>
 
 <body>
+   
     <div class="header-dark" style="height: 1347px;">
         <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
-            <div class="container"><a class="navbar-brand" href="index.html">VPlay</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand" href="{%url 'home'%}">VPlay</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav">
@@ -40,21 +41,14 @@
             <div class="row">
                 <div class="col-xl-3" style="width: 200px;">
                     <div class="row" style="width: 200;height: 200;">
-                        <div class="col-auto"><video class="border rounded" width="200" height="200" controls=""></video></div>
+                        <div class="col-auto"> {% include 'video.html'%} </div>
                     </div>
-                    <div class="row">
-                        <div class="col text-muted" style="width: 200;height: 200;margin: -1px;"><video width="200" height="200" controls=""></video></div>
-                    </div>
-                    <div class="row" style="width: 200;height: 200;">
-                        <div class="col"><video width="200" height="200" controls=""></video></div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><video class="border rounded" width="200" height="200" controls=""></video></div>
-                    </div>
+                    {% comment %} henaaaa {% endcomment %}
+                   
                 </div>
                 <div class="col"><video poster="/vsrc/2.jpeg" width="800" height="600" controls="">
-	<source src="/vsrc/2.webm" type="video/webm" />
-	<source src="/vsrc/2.mp4" type="video/mp4" />
+	<source src="/vsrc/test.webm" type="video/webm" />
+	<source src="/vsrc/Sheet_5_The_Transportation_Model_I_2.mp4" type="video/mp4" />
 	{% comment %} <source src="{{ url }}" type="video/webm"> {% endcomment %}
 </video></div>
             </div>

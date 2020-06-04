@@ -26,7 +26,7 @@ class Video(models.Model):
 	video_file 		= models.FileField(storage=VideoSystemStorage())
 	name 				= models.CharField(max_length=50)
 	description 	= models.TextField(blank=True, null=True)
-	tags 				= models.TextField(blank=True, null=True)
+	tags 				= models.TextField(blank=True, null=True) # music-bla-bla-
 	
 	# non shown fields
 	duration 		= models.TimeField(editable=False, null=False)

@@ -1,0 +1,26 @@
+{% block video_list %} 
+
+{% for instance in object_list %}
+	<a href="/display/{{ instance.id }}/"
+		<section
+			data-aos="fade-up"
+			data-aos-duration="900"
+			data-aos-delay="100"
+			style="width: 500px; margin: 18px;"
+		>
+			<div class="container" style="width: 500px; margin: 0px; height: 200px;">
+				<div class="row" style="height: 200px; width: 1001px; margin: 0px;">
+					<div class="col" style="height: 200px; width: 500px;">
+						<img src= "{{ instance.thumbnail_path }}" style="height:
+						200px;width: 200px;">
+					</div>
+						<h4>Description:{{ instance.description }}</h4>
+					<div class="col-xl-9" style="width: 500px;">
+					</div>
+				</div>
+			</div>
+		</section>
+	</a>
+{% endfor %}
+
+{% endblock video_list %}

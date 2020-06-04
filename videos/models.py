@@ -33,8 +33,6 @@ class Video(models.Model):
 	probe_hash 		= models.CharField(editable=False, max_length=100, unique=True, null=False)
 	thumbnail_path = models.CharField(editable=False, max_length=50, null=False)
 
-	print('vsrc')
-
 	def clean(self):
 		video_path = self.video_file.name.replace(' ','_')
 		video_path = os.path.join(BASE_DIR,MEDIA_ROOT,video_path)

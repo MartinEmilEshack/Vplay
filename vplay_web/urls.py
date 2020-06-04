@@ -27,12 +27,12 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path('display/', display_view, name = 'display'),
     path('', home_view, name='home'),
     path('login/', LogInCreateView.as_view() , name = 'login'),
     path('signup/', SignUpCreateView.as_view(), name = 'signup'),
-    path('videos/<int:id>/', VideoListView.as_view()),
     path('display/<int:vid_hash>/', VideoDetailView.as_view()),
+    # path('display/', display_view, name = 'display'),
+    # path('videos/<int:id>/', VideoListView.as_view()),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # urlpatterns += staticfiles_urlpatterns()

@@ -45,7 +45,7 @@ class VideoAdmin(admin.ModelAdmin):
 			mint, sec = divmod(sec, 60)
 			hr, mint = divmod(mint, 60)
 			duration = '{0:02.0f}:{1:02.0f}:{2:02.0f}'.format(hr,mint,sec)
-
+ 
 			os.remove(video_path)
 
 			obj.duration = duration

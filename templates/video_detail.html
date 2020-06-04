@@ -1,0 +1,8 @@
+{% block video_player %}
+
+	<video width="200" height="200" controls="">
+		<source src="{{ object.video_file.url }}" type="video/mp4" />
+	</video>
+	<h1>{{ object.video_file.url }}<h1>
+
+{% endblock video_player %}

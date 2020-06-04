@@ -36,6 +36,7 @@ class VideoAdmin(admin.ModelAdmin):
 
 			thumbnail = get_thumbnail(video_path,1)
 			thumbnail_path = default_storage.save(thumbnail_path, ContentFile(thumbnail))
+			thumbnail_path = '/'+os.path.relpath(thumbnail_path,BASE_DIR)
 
 			video_probe = ffmpeg.probe(video_path)
 			obj.probe_hash = hashlib.md5(json.dumps(video_probe).encode('utf-8')).hexdigest()

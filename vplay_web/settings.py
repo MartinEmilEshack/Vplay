@@ -128,7 +128,7 @@ USE_TZ = True
 
 STATIC_URL = '/assets/'
 MEDIA_URL = '/vsrc/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'vsrc')
+
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'assets'),
 )

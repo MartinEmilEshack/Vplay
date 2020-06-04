@@ -14,7 +14,7 @@ from vplay_web.settings import BASE_DIR,MEDIA_ROOT
 class VideoSystemStorage(FileSystemStorage):
 	def get_available_name(self, name, max_length=None):
 		if max_length and len(name) > max_length:
-			raise(Exception("name's length is greater than max_length"))
+			raise(Exception("Name's length is greater than max_length"))
 		return name
 
 	def _save(self, name, content):
@@ -31,7 +31,9 @@ class Video(models.Model):
 	# non shown fields
 	duration 		= models.TimeField(editable=False, null=False)
 	probe_hash 		= models.CharField(editable=False, max_length=100, unique=True, null=False)
-	thumbnail_path = models.FilePathField(editable=False, null=False)
+	thumbnail_path = models.CharField(editable=False, max_length=50, null=False)
+
+	print('vsrc')
 
 	def clean(self):
 		video_path = self.video_file.name.replace(' ','_')

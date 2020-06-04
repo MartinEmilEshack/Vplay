@@ -1,8 +1,11 @@
 from django.shortcuts import render
 
+from videos.models import Video
+
 # Create your views here.
 def home_view(request):
-	return render(request, 'home.html', {})
+	videos = Video.objects.all()
+	return render(request, 'home.html', {'object_list':videos})
 
 def display_view(request):
 	return render(request, 'display.html', {})

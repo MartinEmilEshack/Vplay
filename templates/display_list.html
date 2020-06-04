@@ -1,0 +1,12 @@
+{% for instance in object_list %}
+	<a href="/display/{{ instance.id }}/">
+	<div class="row">
+	   <div class="col">
+			<img
+				src="{{ instance.thumbnail_path }}"
+				style="height: 200px;"
+			/>
+		</div>
+	</div>
+	</a>
+{% endfor %}

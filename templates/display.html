@@ -41,16 +41,12 @@
             <div class="row">
                 <div class="col-xl-3" style="width: 200px;">
                     <div class="row" style="width: 200;height: 200;">
-                        <div class="col-auto"> {% include 'video.html'%} </div>
+                        <div class="col-auto"> {% include 'display_list.html'%}  </div>
                     </div>
-                    {% comment %} henaaaa {% endcomment %}
-                   
                 </div>
-                <div class="col"><video poster="/vsrc/2.jpeg" width="800" height="600" controls="">
-	<source src="/vsrc/test.webm" type="video/webm" />
-	<source src="/vsrc/Sheet_5_The_Transportation_Model_I_2.mp4" type="video/mp4" />
-	{% comment %} <source src="{{ url }}" type="video/webm"> {% endcomment %}
-</video></div>
+                <div class="col">
+                    {% include 'video_detail.html'%}
+                </div>
             </div>
         </div>
     </div>

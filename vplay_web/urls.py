@@ -19,12 +19,9 @@ from django.conf import settings
 from django.conf.urls.static import static
 from pages.views import home_view, display_view, login_view, signup_view #aniki you suck
 from users.views import LogInCreateView, SignUpCreateView #martin was here 8^)
-<<<<<<< HEAD
 from videos.views import VideoDetailView, display_video
 from users import views
-=======
 from videos.views import VideoDetailView
->>>>>>> f70b24fac483ddca536f1b68c6af18fb0ac7f5bd
 
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
@@ -33,14 +30,8 @@ urlpatterns = [
     path('display/', display_view, name = 'display'),
     path('', home_view, name='home'),
     path('login/', LogInCreateView.as_view() , name = 'login'),
-<<<<<<< HEAD
-    #path('signup/', SignUpCreateView.as_view(), name = 'signup'),
-    path('signup/', views.signupPage, name = 'signup'),
-    path('video/<int:vid_hash>/', display_video)
-=======
     path('signup/', SignUpCreateView.as_view(), name = 'signup'),
     path('video/<int:vid_hash>/', VideoDetailView.as_view())
->>>>>>> f70b24fac483ddca536f1b68c6af18fb0ac7f5bd
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # urlpatterns += staticfiles_urlpatterns()
